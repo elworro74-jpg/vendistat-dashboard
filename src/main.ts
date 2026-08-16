@@ -507,7 +507,7 @@ async function loginIfNeeded(): Promise<void> {
 
   if (loginError) {
     console.error("LOGIN FAILED:", loginError);
-    window.alert("Не удалось войти в VendiStat.");
+    window.alert(`Не удалось войти: ${loginError.message}`);
     return;
   }
 
